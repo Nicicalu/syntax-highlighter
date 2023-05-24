@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+* {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100vw;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+main {
+  width: 50%;
+  min-width: 800px;
+  margin-top: 100px;
+}
+
+main > div {
+  width: 100%;
+}
+
+#input{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#input textarea {
+  min-width: 100%;
+  max-width: 100%;
+  height: 400px;
+  outline: 0;
+  border: 0;
+}
+
+#selection {
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#selection select {
+  height: 40px;
+}
+
+#selection button {
+  margin-left: 50px;
+  height: 40px;
+}
+
+#result {
+  letter-spacing: normal;
+  padding-top: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 200px;
+}
+
+
+#result.container:not(.selectGunt) td.gutter,
+#result.container .toolbar {
+  user-select: none;
+}
+#result > p {
+  user-select: none;
+}
+#result .options {
+  max-width: 810px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+  color: #666;
+}
+#result .syntaxhighlighter .code .line.alt1 {
+  background-color: #f8f8f8 !important;
+}
+#result .syntaxhighlighter .gutter .line {
+  border-right: none;
+}
+#result .code {
+  letter-spacing: initial;
+}
+#result .code .line {
+  border-left: 3px solid #6ce26c;
+  line-height: 14px;
+}
+#result ol {
+  margin: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cta {
+      display: flex;
+      padding: 10px 45px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      color: white;
+      background: #6225E6;
+      transition: 1s;
+      box-shadow: 6px 6px 0 black;
+      transform: skewX(-15deg);
+      scale: 0.5;
+  }
+  
+  .cta:focus {
+     outline: none; 
+  }
+  
+  .cta:hover {
+      transition: 0.5s;
+      box-shadow: 10px 10px 0 #FBC638;
+  }
+  
+  .cta span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 0px;
+  }
+  
+  .cta:hover  span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 45px;
+  }
+  
+    span {
+      transform: skewX(15deg) 
+    }
+  
+    span:nth-child(2) {
+      width: 20px;
+      margin-left: 30px;
+      position: relative;
+      top: 12%;
+    }
+    
+  /**************SVG****************/
+  
+  path.one {
+      transition: 0.4s;
+      transform: translateX(-60%);
+  }
+  
+  path.two {
+      transition: 0.5s;
+      transform: translateX(-30%);
+  }
+  
+  .cta:hover path.three {
+      animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover path.one {
+      transform: translateX(0%);
+      animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover path.two {
+      transform: translateX(0%);
+      animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  
+  @keyframes color_anim {
+      0% {
+          fill: white;
+      }
+      50% {
+          fill: #FBC638;
+      }
+      100% {
+          fill: white;
+      }
+  }
