@@ -13,6 +13,12 @@ body {
 }
 header{
     width: 100vw;
+    font-family: "Open Sans", sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+header h1{
+    font-size: 45px;
 }
 
 .main-wrapper {
@@ -24,7 +30,6 @@ header{
 main {
   width: 50%;
   min-width: 800px;
-  margin-top: 100px;
 }
 
 main > div {
