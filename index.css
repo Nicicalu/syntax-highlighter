@@ -38,6 +38,7 @@ main > div {
 
 #input{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
 }
 
 #input textarea {
@@ -46,6 +47,8 @@ main > div {
   height: 400px;
   outline: 0;
   border: 0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #selection {
@@ -57,6 +60,9 @@ main > div {
 
 #selection select {
   height: 40px;
+  width: 150px;
+  outline: 0!important;
+  border: 2px solid black;
 }
 
 #selection button {
