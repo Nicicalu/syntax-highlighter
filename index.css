@@ -198,6 +198,12 @@ span:nth-child(2) {
   }
 }
 
+/* Overwrite of the default style of the syntax highlighter */
+/* Padding to the left */
+.syntaxhighlighter.nogutter td.code .line {
+  padding-left: 0.5em;
+}
+
 /* Glass Social buttons */
 .glass-btn {
   width: 100px;
