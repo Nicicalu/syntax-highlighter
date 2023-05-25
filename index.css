@@ -1,24 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+@font-face {
+  font-family: "Rocher";
+  src: url("/assets/RocherColorGX.woff2");
+}
 
 * {
   box-sizing: border-box;
 }
 
-html, 
+html,
 body {
-    height: 100%;
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
-header{
-    width: 100vw;
-    font-family: "Open Sans", sans-serif;
-    padding: 30px;
-    text-align: center;
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
-header h1{
-    font-size: 45px;
+header h1 {
+  font-size: 60px;
+  font-family: Rocher;
+}
+
+footer{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-wrapper {
@@ -26,19 +43,18 @@ header h1{
   justify-content: center;
 }
 
-
 main {
-  width: 50%;
-  min-width: 800px;
+  width: 800px;
+  max-width: 90%;
 }
 
 main > div {
   width: 100%;
 }
 
-#input{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 10px;
+#input {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 
 #input textarea {
@@ -61,7 +77,7 @@ main > div {
 #selection select {
   height: 40px;
   width: 150px;
-  outline: 0!important;
+  outline: 0 !important;
   border: 2px solid black;
 }
 
@@ -78,7 +94,6 @@ main > div {
   border-radius: 10px;
   min-height: 200px;
 }
-
 
 #result.container:not(.selectGunt) td.gutter,
 #result.container .toolbar {
@@ -111,92 +126,163 @@ main > div {
   margin: 0;
 }
 
-
 .wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background: #6225e6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  scale: 0.5;
+  min-width: 560px;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+@media (max-width: 650px) {
+  .wrapper{
+    width: 70%;
   }
-  
   .cta {
-      display: flex;
-      padding: 10px 45px;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: 40px;
-      color: white;
-      background: #6225E6;
-      transition: 1s;
-      box-shadow: 6px 6px 0 black;
-      transform: skewX(-15deg);
-      scale: 0.5;
+    scale: 0.4;
   }
-  
-  .cta:focus {
-     outline: none; 
+}
+
+/* Glass Social buttons */
+.glass-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  margin-left: 1em;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.glass-btn.blue-btn {
+  box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+}
+.glass-btn.blue-btn:hover {
+  box-shadow: 0px 20px 35px -16px rgba(0, 111, 255, 0.65);
+}
+.glass-btn.blue-btn .content {
+  font-size: 4em;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #006fff, #00acff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 10px 37px rgba(0, 111, 255, 0.8);
+}
+.glass-btn.red-btn {
+  box-shadow: 0px 20px 20px -17px rgba(255, 16, 39, 0.5);
+}
+.glass-btn.red-btn:hover {
+  box-shadow: 0px 20px 35px -16px rgba(255, 16, 39, 0.57);
+}
+.glass-btn.red-btn .content {
+  font-size: 4em;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #ff1027, #ff4f06 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 10px 37px rgba(255, 16, 39, 0.6);
+}
+.glass-btn.amber-btn {
+  box-shadow: 0px 20px 20px -17px rgba(255, 159, 16, 0.53);
+}
+.glass-btn.amber-btn:hover {
+  box-shadow: 0px 20px 35px -16px rgba(255, 159, 16, 0.6);
+}
+.glass-btn.amber-btn .content {
+  font-size: 4em;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #ff8d00, #f7ad07 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 10px 37px rgba(255, 94, 16, 0.7);
+}
+.glass-btn:hover {
+  background-color: whitesmoke;
+  transform: translateY(-5px);
+  transition: all 0.3s;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: white;
   }
-  
-  .cta:hover {
-      transition: 0.5s;
-      box-shadow: 10px 10px 0 #FBC638;
+  50% {
+    fill: #fbc638;
   }
-  
-  .cta span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 0px;
+  100% {
+    fill: white;
   }
-  
-  .cta:hover  span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 45px;
-  }
-  
-    span {
-      transform: skewX(15deg) 
-    }
-  
-    span:nth-child(2) {
-      width: 20px;
-      margin-left: 30px;
-      position: relative;
-      top: 12%;
-    }
-    
-  /**************SVG****************/
-  
-  path.one {
-      transition: 0.4s;
-      transform: translateX(-60%);
-  }
-  
-  path.two {
-      transition: 0.5s;
-      transform: translateX(-30%);
-  }
-  
-  .cta:hover path.three {
-      animation: color_anim 1s infinite 0.2s;
-  }
-  
-  .cta:hover path.one {
-      transform: translateX(0%);
-      animation: color_anim 1s infinite 0.6s;
-  }
-  
-  .cta:hover path.two {
-      transform: translateX(0%);
-      animation: color_anim 1s infinite 0.4s;
-  }
-  
-  /* SVG animations */
-  
-  @keyframes color_anim {
-      0% {
-          fill: white;
-      }
-      50% {
-          fill: #FBC638;
-      }
-      100% {
-          fill: white;
-      }
-  }
+}
