@@ -20,3 +20,26 @@ $("#generate").click(function () {
   //Save language
   document.cookie = "lang=" + lang + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 });
+
+function getCookie(name) {
+  const cookieString = document.cookie;
+  const cookies = cookieString.split(";");
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + "=")) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+
+  return null;
+}
+
+$(document).ready(function() {
+  // Retrieve the stored language cookie
+  let storedLang = getCookie("lang");
+  if (storedLang) {
+    // Set the value of the select element to the stored language
+    $("#select").val(storedLang);
+  }
+});
