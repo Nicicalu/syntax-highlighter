@@ -95,7 +95,7 @@ main > div {
   color: #666;
 }
 #result .syntaxhighlighter .code .line.alt1 {
-  background-color: #f8f8f8 !important;
+  background-color: #f8f8f8;
 }
 #result .syntaxhighlighter .gutter .line {
   border-right: none;
