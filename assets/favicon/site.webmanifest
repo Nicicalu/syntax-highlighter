@@ -1,19 +1,24 @@
 {
-    "name": "",
-    "short_name": "",
-    "icons": [
-        {
-            "src": "/assets/favicon/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/assets/favicon/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "theme_color": "#f5ca56",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "Syntax Highlighter K26",
+  "short_name": "Syntax Highlighter",
+  "id": "syntax-highlighter-k26",
+  "description": "Effortlessly highlight and format your code for direct pasting into Word documents. Simplify your workflow and present your code professionally.",
+  "start_url": "/",
+  "dir": "auto",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
